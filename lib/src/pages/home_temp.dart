@@ -12,7 +12,8 @@ final opciones  = ['Uno', 'Dos','tres', 'cuatro', 'cinco'];
         title: Text('Componentes Temp by JoseCima'),
       ),
       body: ListView(
-        children: _crearItems()
+        //children: _crearItems()
+        children: _crearItemsCorta()
       ),
     );
       
@@ -36,8 +37,23 @@ final opciones  = ['Uno', 'Dos','tres', 'cuatro', 'cinco'];
 
 
   List<Widget> _crearItemsCorta(){
+    
+    return opciones.map( ( item ) {
 
-    return [];
+    return Column(
+      children: [
+        ListTile(
+          title: Text(item+ '!'),
+          subtitle: Text('Ejemplo Subtitulo'),
+          leading: Icon(Icons.star),
+          trailing: Icon(Icons.arrow_right),
+          onTap: (){},//pareciera que podemos hacer click
+          ),
+          Divider()
+      ],
+    );
+      
+    }).toList();
   }
 
 }
