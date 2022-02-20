@@ -52,7 +52,8 @@ class  HomePage extends StatelessWidget {
              builder: (context) =>  AlertPage()
              
           );
-          Navigator.push(context, route);
+          //Navigator.push(context, route);
+          Navigator.pushNamed(context, opt['ruta']);
         }
       );
 
