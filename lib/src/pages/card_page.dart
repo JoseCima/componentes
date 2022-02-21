@@ -11,7 +11,9 @@ class CardPage extends StatelessWidget {
      body: ListView(
        padding: EdgeInsets.all(10.0),
        children: <Widget>[
-         _cardTipo1()
+         _cardTipo1(),
+         SizedBox(height: 30.0),
+         _cardTipo2()
        ],
      ),
     );
@@ -45,4 +47,33 @@ class CardPage extends StatelessWidget {
       ),
     );
   }
+
+  Widget _cardTipo2(){
+    return Card(
+      child: Column(
+        children: <Widget> [
+
+
+          FadeInImage(
+            image: NetworkImage('https://www.10wallpaper.com/wallpaper/medium/1501/sunset_winter_shadows-HD_Widescreen_Wallpaper_medium.jpg'),
+            placeholder: AssetImage('assets/loading.gif'), 
+            fadeInDuration: Duration(milliseconds: 200),
+            height: 300.0,
+            fit: BoxFit.cover,
+            
+            ),
+        // Image(
+         //  image: NetworkImage('https://www.creativefabrica.com/wp-content/uploads/2021/06/12/mountain-landscape-illustration-design-b-Graphics-13326021-1.jpg'),
+        // ),
+         Container(
+
+           padding: EdgeInsets.all(10.0),
+           child: Text('Este es un ejemplo de pie de imagen')
+           )
+      ],
+      ),
+    );
+  }
+
 }
+
