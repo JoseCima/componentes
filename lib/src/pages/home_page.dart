@@ -41,6 +41,8 @@ class  HomePage extends StatelessWidget {
   List<Widget> _listItems(data, context) {
     
     final List<Widget> opciones = [];
+
+    
     data.forEach((opt) {
       final widgetTemp = ListTile(
         title:Text(opt['texto']),
