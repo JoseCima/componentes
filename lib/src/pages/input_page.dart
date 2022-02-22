@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class InputPage extends StatefulWidget {
-
+//Este es un comentario
 
   @override
   _InputPageState createState() => _InputPageState();
